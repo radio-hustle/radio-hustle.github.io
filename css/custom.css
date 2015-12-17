@@ -1,0 +1,61 @@
+.typing.type .typing-wrapper {
+    vertical-align: top;
+    overflow: hidden;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+
+.typing.type .typing-wrapper::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: 90%;
+    width: 1px;
+    background-color: #ffffff !important;
+}
+
+.typing.type .typing-wrapper.waiting::after {
+    -webkit-animation: cd-pulse 1s infinite;
+    -moz-animation: cd-pulse 1s infinite;
+    animation: cd-pulse 1s infinite
+}
+
+.typing.type .typing-wrapper.selected {
+    background-color: #ffffff !important;
+}
+
+.typing.type .typing-wrapper.selected::after {
+    visibility: hidden
+}
+
+.typing.type .typing-wrapper.selected b {
+    color: #7d98a0;
+}
+
+.typing.type b {
+    visibility: hidden
+}
+
+.typing.type b.is-visible {
+    visibility: visible;
+    font-style: normal
+}
+
+.typing.type i {
+    position: absolute;
+    visibility: hidden;
+    font-style: normal
+}
+
+.typing.type i.in {
+    position: relative;
+    visibility: visible;
+    font-style: normal
+}

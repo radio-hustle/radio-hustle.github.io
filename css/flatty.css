@@ -199,6 +199,26 @@ input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
+div.cell {
+    position: relative;
+}
+
+div.front-cell-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 500;
+}
+
+div.back-cell-inner {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #d2d7d3;
+    z-index: 400;
+}
+
 fieldset {
     padding: .35em .625em .75em;
     margin: 0 2px;

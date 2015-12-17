@@ -27,12 +27,23 @@ $(function () {
     setCellWidth();
 
     $('div.cell').each(function (i, v) {
-        $(v).append('<div class="vertical flip-container" ontouchstart="this.classList.toggle(\'hover\');">' +
-            '<div class="flipper">' +
-            '<div class="front">' + $(v).attr('data-front') + '</div>' +
-            '<div class="back background-color">' + $(v).attr('data-back') + '</div>' +
-            '</div>' +
-            '</div>');
+//        $(v).append('<div class="vertical flip-container" ontouchstart="this.classList.toggle(\'hover\');">' +
+//            '<div class="flipper">' +
+//            '<div class="front">' + $(v).attr('data-front') + '</div>' +
+//            '<div class="back background-color">' + $(v).attr('data-back') + '</div>' +
+//            '</div>' +
+//            '</div>');
+        $(v).mouseenter(function () {
+            var front = $(v).find('div.front-cell-inner'),
+                back = $(v).find('div.back-cell-inner');
+            front.fadeOut(250);
+            back.fadeIn(250);
+        }).mouseleave(function () {
+            var front = $(v).find('div.front-cell-inner'),
+                back = $(v).find('div.back-cell-inner');
+            front.fadeIn(250);
+            back.fadeOut(250);
+        })
     });
 
     //setInterval(function () {

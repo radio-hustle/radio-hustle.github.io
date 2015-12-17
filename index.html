@@ -12,6 +12,7 @@
 
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/flatty.css" rel="stylesheet">
+    <link href="./css/custom.css" rel="stylesheet">
 
     <link href="./css/cover.css" rel="stylesheet">
 
@@ -40,14 +41,26 @@
 
 <div class="row">
     <div class="no-padding col-xs-12 col-sm-6 col-md-4">
-        <div class="cell" data-front="<h1>TypingJS</h1>"
-             data-back="<a href='https://octav47.github.io/projects/typing/'>Live Demo</a>"></div>
+        <div class="cell" data-front=""
+             data-back="">
+            <div class="front-cell-inner">
+                <h1>TypingJS</h1>
+                <h3 id="typingjs-title"></h3>
+            </div>
+            <div class="back-cell-inner"><a href='https://octav47.github.io/projects/typing/'>Live Demo</a></div>
+        </div>
     </div>
     <div class="no-padding col-xs-12 col-sm-6 col-md-4">
-        <div class="cell" data-front="front2" data-back="back2"></div>
+        <div class="cell" data-front="front2" data-back="back2">
+            <div class="front-cell-inner">front</div>
+            <div class="back-cell-inner">back</div>
+        </div>
     </div>
     <div class="no-padding col-xs-12 col-sm-6 col-md-4">
-        <div class="cell" data-front="front3" data-back="back3"></div>
+        <div class="cell" data-front="front3" data-back="back3">
+            <div class="front-cell-inner">front</div>
+            <div class="back-cell-inner">back</div>
+        </div>
     </div>
 </div>
 
@@ -57,5 +70,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/flatty.js"></script>
+
+<script src="./projects/typingjs/js/typing.min.js"></script>
+<script>
+    $('#typingjs-title').typing({
+        sentences: ['simple', 'awesome', 'useless :(']
+    });
+</script>
 </body>
 </html>
