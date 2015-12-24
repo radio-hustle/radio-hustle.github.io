@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Radio Hustle Live</title>
+
+    <link href="./css/style.css" rel="stylesheet">
+
+    <script src="../../js/jquery.js"></script>
+</head>
+<body>
+<a href="javascript:void(0)" onclick="$('.equalizer').rhEqualizer('toggleActive');">toggle active</a>
+<div class="wrapper">
+    <audio id="playing-track" style="visibility: visible" preload="auto" width="300" height="50" controls>
+        <source src="http://93.188.164.219:8000/;" type="audio/ogg"/>
+        <source src="http://93.188.164.219:8000/;" type="audio/mpeg"/>
+    </audio>
+</div>
+<div class="background-div equalizer"></div>
+<script src="./js/jquery.rhEqualizer.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
