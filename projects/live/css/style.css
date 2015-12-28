@@ -161,6 +161,7 @@ body {
 }
 .masthead-nav > li + li {
     margin-left: 20px;
+    margin-top: -20px;
 }
 .masthead-nav > li > a {
     padding-right: 0;
@@ -250,11 +251,25 @@ body {
     }
 }
 
-@media (min-width: 1px) and (max-width: 768px) {
+@media only screen and (min-width: 1px) and (max-width: 768px) {
     .masthead-brand {
         float: left;
+        margin: -10px 0 0 -10px;
     }
     .masthead-nav {
         float: right;
+    }
+
+    .masthead-nav > li > a {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 402px) {
+    .masthead-brand {
+        margin: -10px 0 0 -10px;
+    }
+    .masthead-nav {
+        font-size: 12px;
     }
 }
