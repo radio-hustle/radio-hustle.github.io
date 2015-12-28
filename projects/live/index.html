@@ -4,20 +4,53 @@
     <meta charset="UTF-8">
     <title>Radio Hustle Live</title>
 
+    <link href="./css/bootstrap.min.css">
     <link href="./css/style.css" rel="stylesheet">
 
     <script src="../../js/jquery.js"></script>
+    <script src="./js/shoutcast.min.js"></script>
 </head>
 <body>
-<a href="javascript:void(0)" onclick="$('.equalizer').rhEqualizer('toggleActive');">toggle active</a>
-<div class="wrapper">
-    <audio id="playing-track" style="visibility: visible" preload="auto" width="300" height="50" controls>
-        <source src="http://93.188.164.219:8000/;" type="audio/ogg"/>
-        <source src="http://93.188.164.219:8000/;" type="audio/mpeg"/>
-    </audio>
+<!--<audio id="player" style="position: absolute; visibility: visible;" preload="auto" width="300" height="50" controls>-->
+    <!--<source src="http://93.188.164.219:8000/;" type="audio/ogg"/>-->
+    <!--<source src="http://93.188.164.219:8000/;" type="audio/mpeg"/>-->
+<!--</audio>-->
+<div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <h3 class="masthead-brand">Hustle FM</h3>
+                    <ul class="nav masthead-nav">
+                        <li class=""><a href="javascript:void(0)"></a></li>
+                        <li><a href="javascript:void(0)" data-lang-id="1">Just missed</a></li>
+                        <li><a href="javascript:void(0)" class="btn-change-language"
+                                data-lang-id="2">Change language</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="inner cover">
+                <h2 class="cover-heading shoutcast-now-playing current-track">...</h2>
+
+                <p class="lead shoutcast-now-playing current-artist">...</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </div>
-<div class="background-div equalizer"></div>
+<div class="background-div">
+    <!--<div class="equalizer"></div>-->
+</div>
 <script src="./js/jquery.rhEqualizer.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/lang.js"></script>
 <script src="./js/main.js"></script>
 </body>
 </html>
