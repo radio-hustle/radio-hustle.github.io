@@ -62,6 +62,10 @@ $(function () {
         }
     });
 
+    audio.addEventListener('pause', function () {
+        $('.equalizer').rhEqualizer('toggleActive', 'stop');
+    });
+
     audio.addEventListener('ended', function () {
         $('.equalizer').rhEqualizer('toggleActive', 'stop');
     });
