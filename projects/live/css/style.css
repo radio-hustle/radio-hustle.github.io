@@ -38,6 +38,55 @@
     text-transform: uppercase;
 }
 
+.shoutcast-just-missed {
+    position: absolute;
+    width: 300px;
+    top: 25px;
+    right: 0;
+    text-align: left;
+    background-color: rgba(85,85,85,0.8);
+}
+
+.shoutcast-just-missed div {
+    width: 300px;
+}
+
+.btn-show-just-missed-close {
+    position: absolute;
+    width: 26px !important;
+    height: 26px !important;
+    top: -10px;
+    left: -15px;
+    padding: 0 0 2px 4px;
+    border: 4px solid #ffffff;
+    border-radius: 10px;
+    background-color: #333333;
+}
+
+.shoutcast-just-missed .cctrack {
+    float: left;
+    margin: 0 0 10px 0;
+    height: 30px;
+    text-overflow: ellipsis;
+}
+
+.shoutcast-just-missed .ccinfo {
+    float: left;
+    margin: 0 0 10px 0;
+    height: 30px;
+    text-overflow: ellipsis;
+}
+
+.shoutcast-just-missed .cctitle {
+    float: left;
+    margin: 10px 0 10px 0;
+    padding: 0 0 0 10px;
+    height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 /*
  * Globals
  */
@@ -198,5 +247,14 @@ body {
     .mastfoot,
     .cover-container {
         width: 700px;
+    }
+}
+
+@media (min-width: 1px) and (max-width: 768px) {
+    .masthead-brand {
+        float: left;
+    }
+    .masthead-nav {
+        float: right;
     }
 }

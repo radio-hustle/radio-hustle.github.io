@@ -6,6 +6,14 @@ $(function () {
         Lang.changeLanguage();
     });
 
+    $('.btn-show-just-missed').on('click', function () {
+        $('.shoutcast-just-missed').css('display', '');
+    });
+
+    $('.btn-show-just-missed-close').on('click', function () {
+        $('.btn-show-just-missed').css('display', 'none');
+    });
+
     $.SHOUTcast({
         host: '93.188.164.219',
         port: 8000,
@@ -24,10 +32,11 @@ $(function () {
         port: 8000,
         playedInterval: 20000,
         played: function (tracks) {
-            $('#played').html('');
+            $('.shoutcast-just-missed').html('')
+                .append('<div class="btn-show-just-missed-close" onclick="$(\'.shoutcast-just-missed\').css(\'display\', \'none\')"><i class="fa fa-times"></i></div>');
             $.each(tracks, function (k, track) {
                 if (k > 0 && k < 6) {
-                    $('#played').append('<div class="cctrack"><div class="ccinfos"><div class="cctitle">' + track.title.replace(/\d{1,3}\sbpm/, '') + '</div></div></div>');
+                    $('.shoutcast-just-missed').append('<div class="cctrack"><div class="ccinfos"><div class="cctitle">' + track.title.replace(/\d{1,3}\sbpm/, '') + '</div></div></div>');
                 }
             });
         }
