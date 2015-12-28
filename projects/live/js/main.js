@@ -12,8 +12,8 @@ $(function () {
         interval: 2000,
         stats: function () {
             var songTitle = this.get('songtitle'),
-                artist = songTitle.split(' - ')[0].trim().replace(/\d{1,3}\sbmp/, ''),
-                title = songTitle.split(' - ')[1].trim().replace(/\d{1,3}\sbpm/, '');
+                artist = songTitle.split(' - ')[0].trim().replace(/^.+bmp/i, ''),
+                title = songTitle.split(' - ')[1].trim().replace(/^.+bpm/i, '');
             $('.shoutcast-now-playing.current-artist').text(artist);
             $('.shoutcast-now-playing.current-track').text(title);
         }
@@ -35,19 +35,40 @@ $(function () {
 
     $(window).resize(function () {
         $('.equalizer').rhEqualizer('setContainerPadding', ($(window).height() / 2 - 70) + 'px 0 0 0');
+        $('.equalizer').rhEqualizer('init');
     });
 
-    var audio = document.getElementById('player');
+    var audio = document.getElementById('player'),
+        volume = 1;
 
     audio.addEventListener('play', function () {
         $('.equalizer').rhEqualizer('toggleActive', 'start');
     });
 
-    audio.addEventListener('pause', function () {
-        $('.equalizer').rhEqualizer('toggleActive', 'stop');
+    audio.addEventListener('volumechange', function () {
+        if (audio.volume == 0) {
+            $('.equalizer').rhEqualizer('toggleActive', 'stop');
+        } else {
+            $('.equalizer').rhEqualizer('toggleActive', 'start');
+        }
     });
 
     audio.addEventListener('ended', function () {
         $('.equalizer').rhEqualizer('toggleActive', 'stop');
+    });
+
+    $('.btn-play').on('click', function () {
+        var icon = $(this).find('i.fa'),
+            status = $(this).attr('data-status');
+        if (status == 'pause') {
+            audio.play();
+            audio.volume = volume;
+            $(this).attr('data-status', 'play');
+        } else {
+            audio.volume = 0;
+            $(this).attr('data-status', 'pause');
+        }
+        icon.toggleClass('fa-play')
+            .toggleClass('fa-pause');
     })
 });

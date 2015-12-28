@@ -11,6 +11,8 @@
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
     <script src="../../js/jquery.js"></script>
     <script src="./js/shoutcast.min.js"></script>
 
@@ -21,10 +23,10 @@
     <![endif]-->
 </head>
 <body>
-<!--<audio id="player" style="position: absolute; visibility: visible;" preload="auto" width="300" height="50" controls>-->
-<!--<source src="http://93.188.164.219:8000/;" type="audio/ogg"/>-->
-<!--<source src="http://93.188.164.219:8000/;" type="audio/mpeg"/>-->
-<!--</audio>-->
+<audio id="player" style="position: absolute; visibility: hidden;" preload="auto" width="300" height="50" controls>
+    <source src="http://93.188.164.219:8000/;" type="audio/ogg"/>
+    <source src="http://93.188.164.219:8000/;" type="audio/mpeg"/>
+</audio>
 <div class="site-wrapper">
 
     <div class="site-wrapper-inner">
@@ -48,6 +50,10 @@
 
                 <p class="lead shoutcast-now-playing current-artist">...</p>
 
+                <div class="btn-play" data-status="pause">
+                    <i class="fa fa-5x fa-play"></i>
+                </div>
+
             </div>
 
         </div>
@@ -56,7 +62,7 @@
 
 </div>
 <div class="background-div">
-    <!--<div class="equalizer"></div>-->
+    <div class="equalizer"></div>
 </div>
 <script src="./js/jquery.rhEqualizer.js"></script>
 <script src="./js/bootstrap.min.js"></script>

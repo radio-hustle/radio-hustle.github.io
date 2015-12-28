@@ -9,8 +9,13 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #888888;
+    /*background-color: #888888;*/
+    background-color: #333333;
     z-index: -1;
+}
+
+.equalizer {
+    width: 110%;
 }
 
 .equalizer > div {
@@ -18,6 +23,19 @@
     display: block;
     width: 1px;
     float: left;
+    opacity: 0.2;
+}
+
+.shoutcast-now-playing.current-track {
+    font-weight: bold;
+    text-shadow: 0 0 10px #000000;
+    text-transform: capitalize;
+}
+
+.shoutcast-now-playing.current-artist {
+    font-weight: bold;
+    text-shadow: 0 0 10px #000000;
+    text-transform: uppercase;
 }
 
 /*

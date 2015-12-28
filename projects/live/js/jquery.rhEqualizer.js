@@ -1,18 +1,63 @@
 (function ($) {
     var options = {};
 
+    var self;
+
     jQuery.fn.rhEqualizer = function () {
 
-        var self = this,
-            defaults = {
+        self = this;
+        var defaults = {
                 style: {
                     width: 10,
-                    height: function () { return Math.random() * 250 + 70; },
+                    height: function () {
+                        return Math.random() * 250 + 70;
+                    },
                     marginRight: 2
                 },
-                active: true
+                active: false
             },
             methods = {
+                init: function () {
+                    console.log('rhEqualizer init method');
+
+                    var countSpan = Math.ceil($(window).width() / (options.style.width + options.style.marginRight));
+
+                    self.empty();
+                    for (var i = 0; i < countSpan; i++) {
+                        self.append('<div style="width: ' + options.style.width + 'px; margin: 0 ' + options.style.marginRight + 'px 0 0;"></div>');
+                    }
+
+                    function equalizer(bar) {
+                        // Syntax: Math.random() * (max-min = range) + min;
+                        // My bars will be at least 70px, and at most 170px tall
+                        var height = options.style.height();
+                        // Any timing would do the trick, mine is height times 7.5 to get a speedy yet bouncy vibe
+                        var timing = height * 7.5;
+                        // If you need to align them on a baseline, just remove this line and also the "marginTop: marg" from the "animate"
+                        var marg = (170 - height) / 2;
+
+                        if (options.active) {
+                            bar.animate({
+                                height: height,
+                                marginTop: marg
+                            }, timing, function () {
+                                equalizer($(this));
+                            });
+                        } else {
+                            bar.animate({
+                                height: 2,
+                                marginTop: 84
+                            }, timing, function () {
+                                equalizer($(this));
+                            });
+                        }
+                    }
+
+// Action on play-pause buttons can be added here (should be a wholesome function rather than annonymous)
+                    self.find('> div').each(function (i) {
+                        equalizer($(this));
+                    });
+                },
                 toggleActive: function () {
                     if (arguments.length == 0) {
                         options.active = !options.active;
@@ -41,48 +86,6 @@
                 options = arguments[0];
             }
             options = $.extend(defaults, options);
-
-            methods['init'] = function (self) {
-                console.log('rhEqualizer init method');
-
-                var countSpan = Math.ceil($(window).width() / (options.style.width + options.style.marginRight));
-
-                for (var i = 0; i < countSpan; i++) {
-                    self.append('<div style="width: ' + options.style.width + 'px; margin: 0 ' + options.style.marginRight + 'px 0 0;"></div>');
-                }
-
-                function equalizer(bar) {
-                    // Syntax: Math.random() * (max-min = range) + min;
-                    // My bars will be at least 70px, and at most 170px tall
-                    var height = options.style.height();
-                    // Any timing would do the trick, mine is height times 7.5 to get a speedy yet bouncy vibe
-                    var timing = height * 7.5;
-                    // If you need to align them on a baseline, just remove this line and also the "marginTop: marg" from the "animate"
-                    var marg = (170 - height) / 2;
-
-                    if (options.active) {
-                        bar.animate({
-                            height: height,
-                            marginTop: marg
-                        }, timing, function () {
-                            equalizer($(this));
-                        });
-                    } else {
-                        bar.animate({
-                            height: 2,
-                            marginTop: 84
-                        }, timing, function () {
-                            equalizer($(this));
-                        });
-                    }
-                }
-
-// Action on play-pause buttons can be added here (should be a wholesome function rather than annonymous)
-                self.find('> div').each(function (i) {
-                    equalizer($(this));
-                });
-            };
-
 
             function _(self) {
                 methods['init'](self);
