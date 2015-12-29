@@ -66,6 +66,10 @@ $(function () {
         $('.equalizer').rhEqualizer('toggleActive', 'stop');
     });
 
+    audio.addEventListener('stalled', function () {
+        $('.equalizer').rhEqualizer('toggleActive', 'stop');
+    });
+
     audio.addEventListener('ended', function () {
         $('.equalizer').rhEqualizer('toggleActive', 'stop');
     });
