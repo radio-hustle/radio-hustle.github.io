@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'SansPoster';
+    src: url('../../../fonts/sansposterbold.ttf');
+}
+
+body {
+
+}
+
+.header {
+    font-family: SansPoster, serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    height: 40px;
+    background-color: #3d5266;
+}
+
+.header .btn {
+    float: left;
+    color: #fa706b;
+    width: 100px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.header .btn:hover {
+    background-color: #5d758c;
+}
+
+.footer {
+    height: 40px;
+    background-color: #3d5266;
+}
+
+#map {
+    width: 100%;
+}
+
+.popup[rel="settings"] {
+    font-family: SansPoster, serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    position: absolute;
+    width: 300px;
+    min-height: 150px;
+    top: 20px;
+    left: 20px;
+    background-color: #5d758c;
+    z-index: 9000;
+}
+
+.popup-header {
+    padding: 10px;
+}
+
+.popup .popup-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    transition: all 1s;
+}
+
+.popup .popup-close:hover {
+    border-radius: 0;
+    transition: all 1s;
+}
+
+.popup-container {
+    height: 100%;
+}
+
+.popup-row {
+    margin: 0 0 25px 0;
+}
+
+.popup-row-header {
+    padding: 10px;
+}
+
+.heatmap-slider {
+    width: 250px;
+    margin: 0 25px 0 25px;
+}

@@ -1,15 +1,42 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>RH Data</title>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="../../css/normalize.css" rel="stylesheet">
+    <link href="//code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+    <script src="//maps.googleapis.com/maps/api/js"></script>
+    <script src="./js/heatmap.min.js"></script>
+    <script src="./js/gmaps-heatmap.js"></script>
 </head>
 <body>
-<div>
-    <a href="javascript:void(0)" id="load-data">Load Data</a>
+<div class="header">
+    <div class="btn load-data">Load Data</div>
+    <div class="btn settings">Settings</div>
 </div>
-<div id="cities"></div>
+<div id="map"></div>
+<div class="footer"></div>
+
+<div class="popup" rel="settings">
+    <div class="popup-header">
+        Settings
+    </div>
+    <div class="popup-close">
+        <i class="fa fa-times"></i>
+    </div>
+    <div class="popup-container">
+        <div class="popup-row">
+            <div class="popup-row-header">Radius</div>
+            <div class="heatmap-slider" data-type="radius"></div>
+        </div>
+    </div>
+</div>
 
 <script src="./js/main.js"></script>
 </body>
