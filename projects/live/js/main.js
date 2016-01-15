@@ -3,7 +3,21 @@ $(function () {
     $('.equalizer').rhEqualizer('setContainerPadding', ($(window).height() / 2 - 70) + 'px 0 0 0');
 
     $('.btn-change-language').on('click', function () {
-        Lang.changeLanguage();
+        //Lang.changeLanguage();
+        $('.change-language-popup').css('display', '');
+    });
+
+    $('.change-language-popup').find('li').on('click', function () {
+        Lang.changeLanguage($(this).attr('data-lang'));
+        $('.change-language-popup').css('display', 'none');
+    });
+
+    $('.change-language-popup .popup-close-btn').on('click', function () {
+        $('.change-language-popup').addClass('animated');
+        setTimeout(function () {
+            $('.change-language-popup').css('display', 'none');
+            $('.change-language-popup').removeClass('animated');
+        }, 1000);
     });
 
     $('.btn-show-just-missed').on('click', function () {
@@ -33,7 +47,7 @@ $(function () {
         playedInterval: 20000,
         played: function (tracks) {
             $('.shoutcast-just-missed').html('')
-                .append('<div class="btn-show-just-missed-close" onclick="$(\'.shoutcast-just-missed\').css(\'display\', \'none\')"><i class="fa fa-times"></i></div>');
+                .append('<div class="popup-close-btn" onclick="$(\'.shoutcast-just-missed\').css(\'display\', \'none\')"><i class="fa fa-times"></i></div>');
             $.each(tracks, function (k, track) {
                 if (k > 0 && k < 6) {
                     $('.shoutcast-just-missed').append('<div class="cctrack"><div class="ccinfos"><div class="cctitle">' + track.title.replace(/\d{1,3}\sbpm/, '') + '</div></div></div>');

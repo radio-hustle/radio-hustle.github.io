@@ -4,11 +4,11 @@
     tokens: {
         '1': {
             'en': 'Just missed',
-            'ru': 'Только что было'
+            'ru': 'Ранее'
         },
         '2': {
-            'en': 'Change language',
-            'ru': 'Сменить язык'
+            'en': '<span class="flag-icon flag-icon-gb flag-icon-squared"></span>',
+            'ru': '<span class="flag-icon flag-icon-ru flag-icon-squared"></span>'
         }
     },
     init: function (callBack) {
@@ -22,7 +22,7 @@
             for (var i in Lang.tokens) {
                 var element = document.querySelector('[data-lang-id="' + i + '"]');
                 //element.setAttribute('data-lang-current', lang);
-                element.innerText = Lang.tokens[i][lang];
+                element.innerHTML = Lang.tokens[i][lang];
             }
             callBack = callBack || function () {};
             callBack();
@@ -50,7 +50,7 @@
         }
         for (var i in Lang.tokens) {
             var element = document.querySelector('[data-lang-id="' + i + '"]');
-            element.innerText = Lang.tokens[i][lang];
+            element.innerHTML = Lang.tokens[i][lang];
         }
         localStorage.setItem('lang', lang);
     }
