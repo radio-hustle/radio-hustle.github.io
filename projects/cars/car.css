@@ -1,0 +1,48 @@
+.circle {
+    width: 10px;
+    /*height: 4px;*/
+    height: 10px;
+    /*line-height: 25px;*/
+    /*border-radius: 10px;*/
+    z-index: 9000;
+    /*border: 1px solid black;*/
+    border-radius: 10px;
+    margin-left: -5px;
+    margin-top: -5px;
+    /*margin: 0;*/
+    background-color: #000000;
+    transform-origin: center center;
+    /*text-align: center;*/
+}
+
+.circle > i {
+    /*height: 20px;*/
+    color: #000000;
+}
+
+/*.ymaps-point-overlay {*/
+    /*width: 30px !important;*/
+    /*height: 30px !important;*/
+/*}*/
+
+.b-car { width: 54px; height: 54px; margin-left:-27px; margin-top:-27px; }
+.b-car.b-car_blue { background: url('./cars-blue.png') no-repeat 0 0; }
+.b-car.b-car-direction-e {background-position:-324px 0}
+.b-car.b-car-direction-ne {background-position:-378px 0}
+.b-car.b-car-direction-n {background-position:0 0}
+.b-car.b-car-direction-nw {background-position:-54px 0}
+.b-car.b-car-direction-w {background-position:-108px 0}
+.b-car.b-car-direction-sw {background-position:-162px 0}
+.b-car.b-car-direction-s {background-position:-216px 0}
+.b-car.b-car-direction-se {background-position:-270px 0}
+
+
+.fa-rotate-0{filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);-webkit-transform: rotate(0deg);-ms-transform: rotate(0deg);transform: rotate(0deg);}
+.fa-rotate-45{filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);-webkit-transform: rotate(45deg);-ms-transform: rotate(45deg);transform: rotate(45deg);}
+.fa-rotate-90{filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);-webkit-transform: rotate(90deg);-ms-transform: rotate(90deg);transform: rotate(90deg);}
+.fa-rotate-135{filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);-webkit-transform: rotate(135deg);-ms-transform: rotate(135deg);transform: rotate(135deg);}
+.fa-rotate-180{filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);-webkit-transform: rotate(180deg);-ms-transform: rotate(180deg);transform: rotate(180deg);}
+.fa-rotate-225{filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);-webkit-transform: rotate(225deg);-ms-transform: rotate(225deg);transform: rotate(225deg);}
+.fa-rotate-270{filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);-webkit-transform: rotate(270deg);-ms-transform: rotate(270deg);transform: rotate(270deg);}
+.fa-rotate-315{filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);-webkit-transform: rotate(315deg);-ms-transform: rotate(315deg);transform: rotate(315deg);}
+.fa-rotate-360{filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);-webkit-transform: rotate(360deg);-ms-transform: rotate(360deg);transform: rotate(360deg);}
