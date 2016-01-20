@@ -4,10 +4,11 @@
 
 #profile img[rel="avatar"] {
     position: absolute;
+    left: 35px;
+    top: 125px;
     width: 100px;
     height: 100px;
-    float: left;
-    border: 5px solid #ffffff;
+    border: 5px solid #f5f5f5;
     z-index: 9000;
 }
 
