@@ -1,0 +1,149 @@
+.container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border: 1px solid #333333;
+    background-color: #aaaaaa;
+}
+
+.cube {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -100px;
+    width: 200px;
+    height: 200px;
+
+    transition: all 1s ease;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50%;
+    transform: perspective(900px) rotate3d(1, 1, 0, 0deg);
+
+}
+
+.a-two:hover ~ .cube {
+    transform: perspective(900px) rotate3d(0, 90, 0, -90deg);
+}
+
+.a-three:hover ~ .cube {
+    transform: perspective(900px) rotate3d(90, 0, 0, 90deg);
+}
+
+.a-four:hover ~ .cube {
+    transform: perspective(900px) rotate3d(0, 90, 0, 90deg);
+}
+
+.a-five:hover ~ .cube {
+    transform: perspective(900px) rotate3d(90, 0, 0, -90deg);
+}
+
+.a-six:hover ~ .cube {
+    transform: perspective(900px) rotate3d(90, 0, 0, -180deg);
+}
+
+.cube span {
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 200px;
+    /* box-shadow: inset 0 0 0 1px rgba(0,0,0,1); */
+    background-image: url('./grass.png');
+    background-size: cover; /* Масштабируем фон */
+}
+
+.cube .n1 {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transform: translate3d(0, 0, 100px);
+}
+
+.cube .n2 {
+    top: 0;
+    left: 100%;
+    opacity: 1;
+
+    transform-origin: 0 0;
+    transform: translate3d(0, 0, 100px) rotate3d(0, 1, 0, 90deg);
+}
+
+.cube .n3 {
+    top: 100%;
+    left: 0;
+    opacity: 1;
+
+    transform-origin: 0 0;
+    transform: translate3d(0, 0, 100px) rotate3d(1, 0, 0, -90deg);
+}
+
+.cube .n4 {
+    top: 0;
+    right: 100%;
+    opacity: 1;
+
+    transform-origin: 100% 0;
+    transform: translate3d(0, 0, 100px) rotate3d(0, 1, 0, -90deg);
+}
+
+.cube .n5 {
+    bottom: 100%;
+    left: 0;
+    opacity: 1;
+
+    transform-origin: 0 100%;
+    transform: translate3d(0, 0, 100px) rotate3d(1, 0, 0, 90deg);
+}
+
+.cube .n6 {
+    top: 0;
+    left: 0;
+    opacity: 1;
+
+    transform-origin: 0 50%;
+    transform: translate3d(0, 0, -100px) rotate3d(1, 0, 0, 180deg);
+}
+
+.cube b {
+    position: absolute;
+    margin: -10px 0 0 -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: inset -3px -3px 5px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+}
+
+.cube .d-25-25 {
+    top: 25%;
+    left: 25%;
+}
+
+.cube .d-25-75 {
+    top: 25%;
+    left: 75%;
+}
+
+.cube .d-50-25 {
+    top: 50%;
+    left: 25%;
+}
+
+.cube .d-50-50 {
+    top: 50%;
+    left: 50%;
+}
+
+.cube .d-50-75 {
+    top: 50%;
+    left: 75%;
+}
+
+.cube .d-75-25 {
+    top: 75%;
+    left: 25%;
+}
+
+.cube .d-75-75 {
+    top: 75%;
+    left: 75%;
+}

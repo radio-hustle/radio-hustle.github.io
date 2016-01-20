@@ -41,16 +41,12 @@ function getRandomRoute(length) {
 }
 
 function makeCarID() {
-    var text = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-    for (var i = 0; i < 10; i++)
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-
-    return text;
+    for (var r = "", a = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789", t = 0; 10 > t; t++)r += a.charAt(Math.floor(Math.random() * a.length));
+    return r;
 }
 
 function startCar(car, route) {
+    var routeArray = [].concat(route);
     car = new Car({
         iconLayout: ymaps.templateLayoutFactory.createClass(
             '<div class="circle" style="transform: rotate($[properties.direction]deg)"></div>'
@@ -60,7 +56,6 @@ function startCar(car, route) {
     ymaps.route(route, {
         mapStateAutoApply: false // автоматически позиционировать карту
     }).then(function (route) {
-        console.log(route);
         route.getPaths().options.set({
             strokeColor: '00000000',
             opacity: 0
@@ -100,7 +95,13 @@ function startCar(car, route) {
             geoObject.options.set({
                 visible: false
             });
-            startCar(car, getRandomRoute(getRandomInt(2, 4)));
+            var newRoute = getRandomRoute(getRandomInt(2, 4));
+            newRoute.unshift(routeArray[routeArray.length - 1]);
+            newRoute[1] = {
+                type: 'viaPoint',
+                point: newRoute[1]
+            };
+            startCar(car, newRoute);
         });
 
     }, function (error) {
@@ -117,7 +118,7 @@ ymaps.ready(function () {
     }, {
         searchControlProvider: 'yandex#search'
     });
-    for (var i = 0; i < 25; i++) {
+    for (var i = 0; i < 1; i++) {
         startCar(cars[makeCarID()], getRandomRoute(getRandomInt(2, 4)));
     }
 });

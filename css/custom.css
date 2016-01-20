@@ -78,3 +78,8 @@
 div[data-cell="2"] .back-cell-inner {
     background-image: url('../img/animated-yandex-maps.png');
 }
+
+div[data-cell="3"] .cell-inner-cover {
+    background: #f0f0f0 url('../img/cube.gif') no-repeat 50% 50%;
+    /*background-size: cover;*/
+}
