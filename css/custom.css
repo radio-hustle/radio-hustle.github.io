@@ -81,5 +81,8 @@ div[data-cell="2"] .back-cell-inner {
 
 div[data-cell="3"] .cell-inner-cover {
     background: #f0f0f0 url('../img/cube.gif') no-repeat 50% 50%;
-    /*background-size: cover;*/
+}
+
+div[data-cell="4"] .cell-inner-cover {
+    background: #f0f0f0 url('../img/equalizer.png');
 }
