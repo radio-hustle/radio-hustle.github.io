@@ -28,12 +28,8 @@
                     }
 
                     function equalizer(bar) {
-                        // Syntax: Math.random() * (max-min = range) + min;
-                        // My bars will be at least 70px, and at most 170px tall
                         var height = options.style.height();
-                        // Any timing would do the trick, mine is height times 7.5 to get a speedy yet bouncy vibe
                         var timing = height * 7.5;
-                        // If you need to align them on a baseline, just remove this line and also the "marginTop: marg" from the "animate"
                         var marg = (170 - height) / 2;
 
                         if (options.active) {
@@ -53,7 +49,6 @@
                         }
                     }
 
-// Action on play-pause buttons can be added here (should be a wholesome function rather than annonymous)
                     self.find('> div').each(function (i) {
                         equalizer($(this));
                     });
