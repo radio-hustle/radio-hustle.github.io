@@ -118,7 +118,7 @@ ymaps.ready(function () {
     }, {
         searchControlProvider: 'yandex#search'
     });
-    for (var i = 0; i < 1; i++) {
+    for (var i = 0; i < 10; i++) {
         startCar(cars[makeCarID()], getRandomRoute(getRandomInt(2, 4)));
     }
 });
