@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="./css/clean.css" rel="stylesheet">
+    <link href="./css/normalize.css" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.round.helpers.js"></script>
+    <script type="text/javascript" src="js/jquery.round.anim.js"></script>
+    <script type="text/javascript" src="js/jquery.round.core.js"></script>
+    <script type="text/javascript" src="js/jquery.round.target.js"></script>
+    <script type="text/javascript" src="js/jquery.round.button.js"></script>
+    <script type="text/javascript" src="js/jquery.round.container.js"></script>
+    <script type="text/javascript" src="./js/purecssmatrix.js"></script>
+    <script type="text/javascript" src="./js/sylvester.src.stripped.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="figure one zoomTarget" data-closeclick="true">Текст 1</div>
+    <div class="figure two zoomTarget" data-closeclick="true">Текст 2</div>
+    <div class="figure three zoomTarget" data-closeclick="true">Текст 3</div>
+    <div class="figure four zoomTarget" data-closeclick="true">Текст 4</div>
+    <div class="figure five zoomTarget" data-closeclick="true">Текст 5</div>
+    <div class="figure six zoomTarget" data-closeclick="true">Текст 6</div>
+    <div class="figure seven zoomTarget" data-closeclick="true">Текст 7</div>
+</div>
+
+<script>
+    $('.figure').on('click', function () {
+//        $(this).Round();
+    });
+</script>
+</body>
+</html>

@@ -86,3 +86,7 @@ div[data-cell="3"] .cell-inner-cover {
 div[data-cell="4"] .cell-inner-cover {
     background: #f0f0f0 url('../img/equalizer.png');
 }
+
+div[data-cell="5"] .cell-inner-cover {
+    background: #f0f0f0 url('../img/round.png');
+}

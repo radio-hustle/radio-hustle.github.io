@@ -1,0 +1,66 @@
+html {
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    font-size: 24pt;
+    /*animation: zoom-one 3s, zoom-two 3s 5s;*/
+    /*animation: zoom-two 3s 0s 1 alternate forwards;*/
+}
+
+.figure {
+    position: absolute;
+    border: 1px solid black;
+}
+
+.figure.one {
+    top: 50%;
+    left: 50%;
+}
+
+.figure.two {
+    top: 35%;
+    left: 15%;
+    transform: rotate(-40deg) skewX(-30deg);
+}
+
+.figure.three {
+    top: 10%;
+    left: 10%;
+    transform: rotate(-20deg);
+}
+
+.figure.four {
+    top: 85%;
+    left: 30%;
+    transform: rotate(250deg);
+}
+
+.figure.five {
+    top: 20%;
+    left: 85%;
+    transform: rotate(125deg);
+}
+
+.figure.six {
+    top: 80%;
+    left: 80%;
+    transform: rotate(164deg);
+}
+
+.figure.seven {
+    top: 50%;
+    left: 100%;
+    transform: rotate(10deg);
+}
+
+.notransform {
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -o-transform: none !important;
+    -ms-transform: none !important;
+    transform: none !important;
+}
