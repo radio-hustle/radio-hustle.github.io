@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link href="./css/jqueryui.css" rel="stylesheet">
+    <link href="./css/musicplayer.css" rel="stylesheet">
+</head>
+<body>
+<label for="range">Диапазон</label><input type="text" id="range" readonly style="border:0; font-weight:bold;">
+
+<div id="slider-range"></div>
+
+<a id="submit" href="javascript:void(0)" class="btn btn-default">Подобрать треки</a>
+
+<div id="tracks-count"></div>
+<audio id="playing-track" controls preload="auto" style="display: none; width: 100%;">
+    <source class="source" src="" type="audio/mpeg">
+    <source class="source" src="" type="audio/ogg">
+    Your browser does not support the audio element.
+</audio>
+<audio id="next-track" controls preload="auto" style="display: none; width: 100%;">
+    <source class="source" src="" type="audio/mpeg">
+    <source class="source" src="" type="audio/ogg">
+    Your browser does not support the audio element.
+</audio>
+
+<div style="display: none;">
+    <a id="show-new-tracks" href="javascript:void(0)" class="btn btn-default">Выделить новые треки</a>
+</div>
+
+<ul id="current-playlist" style="display: none;"></ul>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/jqueryui.min.js"></script>
+<script src="./js/musicplayer.js"></script>
+</body>
+</html>
