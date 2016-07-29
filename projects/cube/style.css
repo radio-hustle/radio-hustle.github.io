@@ -2,8 +2,8 @@
     position: relative;
     width: 600px;
     height: 600px;
-    border: 1px solid #333333;
-    background-color: #aaaaaa;
+    border: 1px solid #333;
+    background-color: #aaa
 }
 
 .cube {
@@ -13,7 +13,6 @@
     margin: -100px 0 0 -100px;
     width: 200px;
     height: 200px;
-
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
     -webkit-transform-style: preserve-3d;
@@ -22,33 +21,32 @@
     -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     -webkit-transform: perspective(900px) rotate3d(1, 1, 0, 0deg);
-    transform: perspective(900px) rotate3d(1, 1, 0, 0deg);
-
+    transform: perspective(900px) rotate3d(1, 1, 0, 0deg)
 }
 
 .a-two:hover ~ .cube {
     -webkit-transform: perspective(900px) rotate3d(0, 90, 0, -90deg);
-    transform: perspective(900px) rotate3d(0, 90, 0, -90deg);
+    transform: perspective(900px) rotate3d(0, 90, 0, -90deg)
 }
 
 .a-three:hover ~ .cube {
     -webkit-transform: perspective(900px) rotate3d(90, 0, 0, 90deg);
-    transform: perspective(900px) rotate3d(90, 0, 0, 90deg);
+    transform: perspective(900px) rotate3d(90, 0, 0, 90deg)
 }
 
 .a-four:hover ~ .cube {
     -webkit-transform: perspective(900px) rotate3d(0, 90, 0, 90deg);
-    transform: perspective(900px) rotate3d(0, 90, 0, 90deg);
+    transform: perspective(900px) rotate3d(0, 90, 0, 90deg)
 }
 
 .a-five:hover ~ .cube {
     -webkit-transform: perspective(900px) rotate3d(90, 0, 0, -90deg);
-    transform: perspective(900px) rotate3d(90, 0, 0, -90deg);
+    transform: perspective(900px) rotate3d(90, 0, 0, -90deg)
 }
 
 .a-six:hover ~ .cube {
     -webkit-transform: perspective(900px) rotate3d(90, 0, 0, -180deg);
-    transform: perspective(900px) rotate3d(90, 0, 0, -180deg);
+    transform: perspective(900px) rotate3d(90, 0, 0, -180deg)
 }
 
 .cube span {
@@ -56,9 +54,8 @@
     display: block;
     width: 200px;
     height: 200px;
-    /* box-shadow: inset 0 0 0 1px rgba(0,0,0,1); */
-    background-image: url('./grass.png');
-    background-size: cover; /* Масштабируем фон */
+    background-image: url(./grass.png);
+    background-size: cover
 }
 
 .cube .n1 {
@@ -67,7 +64,7 @@
     opacity: 1;
     filter: alpha(opacity=100);
     -webkit-transform: translate3d(0, 0, 100px);
-    transform: translate3d(0, 0, 100px);
+    transform: translate3d(0, 0, 100px)
 }
 
 .cube .n2 {
@@ -75,14 +72,11 @@
     left: 100%;
     opacity: 1;
     filter: alpha(opacity=100);
-
     -webkit-transform-origin: 0 0;
-
     -ms-transform-origin: 0 0;
-
     transform-origin: 0 0;
     -webkit-transform: translate3d(0, 0, 100px) rotate3d(0, 1, 0, 90deg);
-    transform: translate3d(0, 0, 100px) rotate3d(0, 1, 0, 90deg);
+    transform: translate3d(0, 0, 100px) rotate3d(0, 1, 0, 90deg)
 }
 
 .cube .n3 {
@@ -90,14 +84,11 @@
     left: 0;
     opacity: 1;
     filter: alpha(opacity=100);
-
     -webkit-transform-origin: 0 0;
-
     -ms-transform-origin: 0 0;
-
     transform-origin: 0 0;
     -webkit-transform: translate3d(0, 0, 100px) rotate3d(1, 0, 0, -90deg);
-    transform: translate3d(0, 0, 100px) rotate3d(1, 0, 0, -90deg);
+    transform: translate3d(0, 0, 100px) rotate3d(1, 0, 0, -90deg)
 }
 
 .cube .n4 {
@@ -105,14 +96,11 @@
     right: 100%;
     opacity: 1;
     filter: alpha(opacity=100);
-
     -webkit-transform-origin: 100% 0;
-
     -ms-transform-origin: 100% 0;
-
     transform-origin: 100% 0;
     -webkit-transform: translate3d(0, 0, 100px) rotate3d(0, 1, 0, -90deg);
-    transform: translate3d(0, 0, 100px) rotate3d(0, 1, 0, -90deg);
+    transform: translate3d(0, 0, 100px) rotate3d(0, 1, 0, -90deg)
 }
 
 .cube .n5 {
@@ -120,14 +108,11 @@
     left: 0;
     opacity: 1;
     filter: alpha(opacity=100);
-
     -webkit-transform-origin: 0 100%;
-
     -ms-transform-origin: 0 100%;
-
     transform-origin: 0 100%;
     -webkit-transform: translate3d(0, 0, 100px) rotate3d(1, 0, 0, 90deg);
-    transform: translate3d(0, 0, 100px) rotate3d(1, 0, 0, 90deg);
+    transform: translate3d(0, 0, 100px) rotate3d(1, 0, 0, 90deg)
 }
 
 .cube .n6 {
@@ -135,14 +120,11 @@
     left: 0;
     opacity: 1;
     filter: alpha(opacity=100);
-
     -webkit-transform-origin: 0 50%;
-
     -ms-transform-origin: 0 50%;
-
     transform-origin: 0 50%;
     -webkit-transform: translate3d(0, 0, -100px) rotate3d(1, 0, 0, 180deg);
-    transform: translate3d(0, 0, -100px) rotate3d(1, 0, 0, 180deg);
+    transform: translate3d(0, 0, -100px) rotate3d(1, 0, 0, 180deg)
 }
 
 .cube b {
@@ -152,41 +134,41 @@
     height: 20px;
     border-radius: 50%;
     box-shadow: inset -3px -3px 5px rgba(0, 0, 0, 0.3);
-    opacity: 0.9;
-    filter: alpha(opacity=90);
+    opacity: .9;
+    filter: alpha(opacity=90)
 }
 
 .cube .d-25-25 {
     top: 25%;
-    left: 25%;
+    left: 25%
 }
 
 .cube .d-25-75 {
     top: 25%;
-    left: 75%;
+    left: 75%
 }
 
 .cube .d-50-25 {
     top: 50%;
-    left: 25%;
+    left: 25%
 }
 
 .cube .d-50-50 {
     top: 50%;
-    left: 50%;
+    left: 50%
 }
 
 .cube .d-50-75 {
     top: 50%;
-    left: 75%;
+    left: 75%
 }
 
 .cube .d-75-25 {
     top: 75%;
-    left: 25%;
+    left: 25%
 }
 
 .cube .d-75-75 {
     top: 75%;
-    left: 75%;
+    left: 75%
 }
