@@ -73,6 +73,10 @@
         });
     }
     window.onload = function init() {
+        alert('navigator.getUserMedia -> ' + !!navigator.getUserMedia +
+                '\n\nnavigator.webkitGetUserMedia -> ' + !!navigator.webkitGetUserMedia +
+                '\n\nnavigator.mozGetUserMedia -> ' + !!navigator.mozGetUserMedia +
+                '\n\nnavigator.msGetUserMedia -> ' + !!navigator.msGetUserMedia);
         try {
             // webkit shim
             window.AudioContext = window.AudioContext || window.webkitAudioContext;
